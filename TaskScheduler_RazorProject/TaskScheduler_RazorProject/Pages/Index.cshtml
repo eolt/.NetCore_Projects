@@ -1,0 +1,13 @@
+﻿@page
+@model TaskScheduler_RazorProject.Pages.IndexModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1>Welcome</h1>
+    <br />
+    <h2>You currently have: @Model.Tasks.Count() tasks in you schedule.</h2>
+    <br />
+    <h5>Click the tabs above to view tasks in detail.</h5>
+</div>

@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand navbar-dark">
+            <div class="container-fluid navbar-nav">
+                    <a class="nav-item nav-link @ViewData["ColorToday"]" asp-area="" asp-page="/Today/Index">Today</a>
+                    <a class="nav-item nav-link @ViewData["ColorTomorrow"]" asp-area="" asp-page="/Tomorrow/Index">Tomorrow</a>
+                    <a class="nav-item nav-link @ViewData["ColorLater"]" asp-area="" asp-page="/Later/Index">Later</a>
+
+                    <div class="d-flex">
+                        <a class="btn btn-success me-2" role="button" asp-page="/Create">Create Task</a>
+                    </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2021 - TaskScheduler_RazorProject 
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
