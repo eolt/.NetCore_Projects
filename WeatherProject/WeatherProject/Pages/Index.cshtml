@@ -1,0 +1,27 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Weather App";
+}
+
+@{
+    var imagePath = @"Images\plain.jpeg";
+}
+
+
+<div class="container">
+        <img src="@imagePath" height="745" width="1200" style="filter: brightness(50%);"/>
+        <div class="col-sm-10 offset-sm-1 text-center">
+            <div class="display-1" style="color: white; position: absolute; bottom: 50%; margin-bottom: 300px;">Submit a city name to view its current weather.</div>
+            <div class="info-form lg" style="position: absolute; bottom: 50%; margin-bottom: 200px; margin-left: 300px;">
+                <form class="form-inline justify-content-center d-flex" method="POST">
+                    <div class="input-group mb-3">
+                        <input type="text" asp-for="CityName" class="form-control" placeholder="City Name:" aria-label="City Name" aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                            <input value="Submit" class="btn btn-warning" type="submit" />
+                        </div>
+                    </div>
+                </form>
+            </div>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+﻿@page
+@model WeatherProject.Pages.CurrentWeatherModel
+@{
+    ViewData["Title"] = "Weather App";
+}
+
+@{
+    var imagePath = @"Images\"+ Model.Image+".jpeg";
+}
+
+<div class="container">
+    <img src="@imagePath" height="745" width="1200" style="filter: brightness(60%);" />
+    <div class="col-sm-10 offset-sm-1 text-center">
+
+        <div class="display-3" style="color: white; position: absolute; bottom: 50%; margin-bottom: 500px">
+            The temperature in @Model.City is @Model.Temperature degrees Farenheit
+        </div>
+
+        <div class="display-3" style="color: white; position: absolute; bottom: 50%; margin-bottom: 300px; margin-left: 100px;">
+            Currently: @Model.Description
+        </div>
+    </div>
+</div>
