@@ -50,8 +50,10 @@ namespace WeatherProject.Pages
         public async Task<IActionResult> OnGet()
         {
             City = Request.Query["city"];
-
-            var api_key = "ff48f5a6e091ffa34cc6440d41c3da7e";
+            
+            //  Configure http request of openweathermap.org api
+            //  An api key is need for the website to fullfill request
+            var api_key = "00000000000000";
             var unit = "imperial";
             var url = "https://api.openweathermap.org/data/2.5/weather?q=" + City + "&appid=" + api_key + "&units=" + unit;
 
