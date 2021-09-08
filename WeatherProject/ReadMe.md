@@ -22,6 +22,6 @@ The website receves weather inforamtion through OpenWeatherMap API. Our page fet
 
 ## TODOs
 - Store website to a Docker container and deploy to a cloud server
-- Implement program to automatically get the location of the computer browser and display the info. 
+- Implement program to automatically get the location of the computer browser and display info. 
 
 
