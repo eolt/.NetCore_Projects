@@ -1,6 +1,6 @@
 # Weather Browser
 
-This .Net Core web browser allows users to know the current temperature and weather description of a city. There are different jpeg files saved to the root folder which display an image based on the current weather description. If a user enters an invalide city name, the website returns an error message while continuing to allow city searches. 
+This .Net Core web browser allows users to know the current temperature and weather description of a city. There are different jpeg files saved to the root folder which display an image based on the current weather description. If a user enters an invalid city name, the website returns an error message while continuing to allow city searches. 
 
 ## Implementation
 The website receves weather inforamtion through OpenWeatherMap API. Our page fetches the city name from the text input form on the home page and error page. A http request passes on information from the API to a class object. The class object is what we use to get the current temperature and description.
