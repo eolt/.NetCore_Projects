@@ -22,6 +22,9 @@ The edit page is similar to create, except previous values of event are included
 <img width="1680" alt="Untitled" src="https://user-images.githubusercontent.com/27907086/133363204-14f2af18-c31f-4ada-9e29-92c96da3afa4.png">
 
 ## Details 
+When a user clicks on one of the events, a details page is returned. The details page lists the Information of event and shows actions to perform.
+
+<img width="1680" alt="Screen Shot 2021-09-13 at 9 45 04 PM" src="https://user-images.githubusercontent.com/27907086/133365185-e12b8460-c08c-4eb9-a4aa-74b53f523829.png">
 
 
 
