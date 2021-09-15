@@ -12,6 +12,10 @@ Our web app updates the navigation bar based on the current day of observation. 
 <img width="1680" alt="Screen Shot 2021-09-16 at 9 49 30 PM" src="https://user-images.githubusercontent.com/27907086/133362541-e89a0c4e-5b18-4c47-8bde-239f729f8f7a.png">
 
 
+## Events Display
+<img width="1680" alt="Screen Shot 2021-09-13 at 8 58 32 PM" src="https://user-images.githubusercontent.com/27907086/133365540-b35a4ee7-c93f-4298-9b58-e07e7d3c3657.png">
+
+
 ## Create/Edit Event Display
 The creation button is accessed at the top of navigation bar.  
 
