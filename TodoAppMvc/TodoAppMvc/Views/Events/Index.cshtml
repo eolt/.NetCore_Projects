@@ -1,0 +1,22 @@
+@model IEnumerable<TodoAppMvc.Models.Event>
+
+@{ ViewData["Title"] = "Index"; }
+
+<div class="index-page">
+    <h1>@ViewData["DayTitle"]</h1>
+</div>
+
+<br />
+<div class="list-group">
+    @foreach (var item in Model)
+    {
+    <a asp-action="Details" asp-route-id="@item.Id" asp-route-day="@ViewData["Day"]" class="event-cell list-group-item list-group-item-action" style="font-family: 'Lora'; color: #B4644C; background-color: #E7D4C0; margin-bottom: 25px; border-color: @item.Color; border-width: medium;">
+        <div class="d-flex w-100 justify-content-between">
+            <h3 class="mb-1">@Html.DisplayFor(modelItem => item.Title)</h3>
+            <small class="text-muted">Due: @item.DateTime.ToString("hh:mm tt")</small>
+        </div>
+        <p class="mb-1">@Html.DisplayFor(modelItem => item.Description)</p>
+        <small class="text-muted"></small>
+    </a>
+    }
+</div>

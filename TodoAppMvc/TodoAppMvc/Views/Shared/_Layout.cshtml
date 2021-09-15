@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - TodoAppMvc</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css"  type="text/css" >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="page-title">My Weekly Schedule</h1>
+        </div>
+        <nav class="navbar navbar-dark border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="nav-link" asp-area="" asp-controller="Events" asp-action="Index" asp-route-day="0">@DateTime.Today.DayOfWeek</a>
+                <a class="nav-link" asp-area="" asp-controller="Events" asp-action="Index" asp-route-day="1">@DateTime.Today.AddDays(1).DayOfWeek</a>
+                <a class="nav-link" asp-area="" asp-controller="Events" asp-action="Index" asp-route-day="2">@DateTime.Today.AddDays(2).DayOfWeek</a>
+                <a class="nav-link" asp-area="" asp-controller="Events" asp-action="Index" asp-route-day="3">@DateTime.Today.AddDays(3).DayOfWeek</a>
+                <a class="nav-link" asp-area="" asp-controller="Events" asp-action="Index" asp-route-day="4">@DateTime.Today.AddDays(4).DayOfWeek</a>
+                <a class="nav-link" asp-area="" asp-controller="Events" asp-action="Index" asp-route-day="5">@DateTime.Today.AddDays(5).DayOfWeek</a>
+                <a class="nav-link" asp-area="" asp-controller="Events" asp-action="Index" asp-route-day="6">@DateTime.Today.AddDays(6).DayOfWeek</a>
+                <div class="d-flex">
+                    <a class="btn btn-warning me-2" asp-controller="Events" asp-action="Create">Create</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2021 - TodoAppMvc
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

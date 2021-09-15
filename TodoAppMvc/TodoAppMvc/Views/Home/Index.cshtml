@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+
+@{
+    var events = @Model;
+    var msg = "";
+
+    if (events != 1)
+    {
+        msg = $"You have {events} events saved in database";
+    }
+    else
+    {
+        msg = $"You have {events} event saved in database";
+    }
+}
+<div class="home-screen" >
+    <h1 class="home-page">Welcome</h1>
+    <h2 class="home-page">@msg</h2>
+</div>
+    
+
+

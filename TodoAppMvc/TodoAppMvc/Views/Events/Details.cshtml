@@ -1,0 +1,48 @@
+@model TodoAppMvc.Models.Event
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1 class="index-page">Details</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DueDate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DueDate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DateTime)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DateTime)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Color)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Color)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a class="btn btn-lg btn-primary" asp-action="Edit" asp-route-id="@Model.Id" asp-route-day="@ViewData["Day"]">Edit Event</a>                   
+    <a class="btn btn-lg  btn-danger" asp-action="Delete" asp-route-id="@Model.Id" asp-route-day="@ViewData["Day"]" style="margin-left: 20px; margin-right: 20px">Delete Event</a> 
+    <a class="btn btn-lg btn-info" asp-action="Index" asp-route-day="@ViewData["Day"]">Back to List</a>
+</div>
