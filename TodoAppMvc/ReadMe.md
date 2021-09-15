@@ -23,7 +23,7 @@ Our web app updates the navigation bar based on the current day of observation. 
 ## Create/Edit Event Display
 The creation button is accessed at the top of navigation bar.  
 
-The user has the option to set a description to the event and highlight event with a sepified color. Due date, time, and title of event are required to submit the input. 
+The user has the option to set a description to the event and highlight event with a specific color. Due date, time, and title of event are required to submit the input. 
 <img width="1680" alt="Screen Shot 2021-09-13 at 8 44 30 PM" src="https://user-images.githubusercontent.com/27907086/133362933-d1b62e41-7cbb-4b83-abcc-58563cd7eac2.png">
 
 The edit page is similar to create, except previous values of event are included. 
