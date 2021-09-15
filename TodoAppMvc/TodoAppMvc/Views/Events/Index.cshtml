@@ -2,11 +2,13 @@
 
 @{ ViewData["Title"] = "Index"; }
 
+    <!-- @ViewData[] lists the date format as DayOfWeek, Month ## -->
 <div class="index-page">
     <h1>@ViewData["DayTitle"]</h1>
 </div>
 
 <br />
+    <!-- Display events as list of anchor tags. When a user clicks on a tag, the details page is redirected -->
 <div class="list-group">
     @foreach (var item in Model)
     {
