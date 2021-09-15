@@ -1,6 +1,8 @@
 # 7 Day Event Planner 
 
-This program acts as a normal todo list with the additional setup of listing events for the span of one week. A user can navigate through each day of week and find the task(s) due for that day. The program uses sqllite and Entity Framework packages to enable saving data to memory. 
+This program acts as a normal todo list with the additional setup of listing events for the span of one week. A user can navigate through each day of week and find the task(s) due for that day. The program uses SQLite and Entity Framework packages to enable saving data to memory. And implement MVC (model view controller) format to organize the data, functionality, and UI of our app. 
+
+![navigate](https://user-images.githubusercontent.com/27907086/133369878-88aacb3d-de70-4e52-848d-3e4046cf52fa.gif)
 
 
 ## Home Page Display 
@@ -14,6 +16,7 @@ Our web app updates the navigation bar based on the current day of observation. 
 
 
 ## Events Display
+
 <img width="1680" alt="Screen Shot 2021-09-13 at 8 58 32 PM" src="https://user-images.githubusercontent.com/27907086/133365540-b35a4ee7-c93f-4298-9b58-e07e7d3c3657.png">
 
 
