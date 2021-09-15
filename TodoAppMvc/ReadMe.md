@@ -12,5 +12,17 @@ Our web app updates the navigation bar based on the current day of observation. 
 <img width="1680" alt="Screen Shot 2021-09-16 at 9 49 30 PM" src="https://user-images.githubusercontent.com/27907086/133362541-e89a0c4e-5b18-4c47-8bde-239f729f8f7a.png">
 
 
+## Create/Edit Event Display
+The creation button is accessed at the top of navigation bar.  
+
+The user has the option to set a description to the event and highlight event with a sepified color. Due date, time, and title of event are required to submit the input. 
+<img width="1680" alt="Screen Shot 2021-09-13 at 8 44 30 PM" src="https://user-images.githubusercontent.com/27907086/133362933-d1b62e41-7cbb-4b83-abcc-58563cd7eac2.png">
+
+The edit page is similar to create, except previous values of event are included. 
+<img width="1680" alt="Untitled" src="https://user-images.githubusercontent.com/27907086/133363204-14f2af18-c31f-4ada-9e29-92c96da3afa4.png">
+
+## Details 
+
+
 
 
