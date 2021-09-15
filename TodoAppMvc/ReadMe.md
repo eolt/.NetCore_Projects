@@ -3,7 +3,7 @@
 
 
 ## Home Page Display 
-Our web app updates nav bar with based on the current day of observation. The current day of week will be on the right hand side and extend towards left for rest of the seven days. 
+Our web app updates the navigation bar based on the current day of observation. The current day of week will be on the right hand side and extend towards left for rest of the seven days. 
 
 <img width="1680" alt="Screen Shot 2021-09-13 at 9 42 33 PM" src="https://user-images.githubusercontent.com/27907086/133362499-143903ee-a00a-44ec-93a1-e5f1e523fbd5.png">
 
