@@ -7,6 +7,10 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using TodoAppMvc.Models;
 
+// Our events controller all the CRUD actions of our web app
+// Since our app displays events by separate days, we must pass information 
+//  on which day user wants to access.
+
 namespace TodoAppMvc.Controllers
 {
     public class EventsController : Controller
@@ -21,10 +25,14 @@ namespace TodoAppMvc.Controllers
         // GET: Events
         public async Task<IActionResult> Index(string day = null)
         {
+            //  First we get all events in our database and sort them by due date and time.
             IQueryable<Event> events = from e in _context.Event
                                        orderby e.DateTime ascending, e.DueDate descending
                                        select e;
 
+            //  Our program only lists events due today or later. 
+            //  Therefore if there are events past the date of today,
+            //  A function is called to delete the events from database
             if (events.Any())
             { 
                 if (events.Last().DueDate < DateTime.Today.Date)
@@ -34,7 +42,8 @@ namespace TodoAppMvc.Controllers
             }
 
             String stringDayFormat = "";
-
+            
+            //  The events are filtered to only be of the due date for a specific page view. 
             if (!String.IsNullOrEmpty(day))
             {
                 if (day.Equals("0"))
@@ -75,6 +84,7 @@ namespace TodoAppMvc.Controllers
             }
             else
             {
+                // if error return home page
                 return RedirectToAction("Index", "Home", new { area = "" });
             }
 
@@ -84,6 +94,7 @@ namespace TodoAppMvc.Controllers
             return View(await events.ToListAsync());
         }
 
+        //  Delete events past the current date 
         private async void DeleteOverDueEvents()
         {
             _context.RemoveRange(_context.Event.Where(e => e.DueDate < DateTime.Today.Date));
@@ -117,8 +128,6 @@ namespace TodoAppMvc.Controllers
         }
 
         // POST: Events/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Title,Description,DueDate,DateTime,Color")] Event @event, string day="0")
