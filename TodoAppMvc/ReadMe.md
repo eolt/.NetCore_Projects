@@ -1,5 +1,6 @@
 # 7 Day Event Planner 
 
+This program acts as a normal todo list with the additional setup of listing events for the span of one week. A user can navigate through each day of week and find the task(s) due for that day. The program uses sqllite and Entity Framework packages to enable saving data to memory. 
 
 
 ## Home Page Display 
